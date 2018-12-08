@@ -1,0 +1,46 @@
+{
+  "name": "wolf-cli",
+  "version": "0.0.8",
+  "description": "",
+  "main": "index.js",
+  "author": "deng00001",
+  "scripts": {
+    "clean": "rm -rf lib && rm -rf es6 && rm -rf typings",
+    "build:ts": "tsc -p ./ --outDir es6/",
+    "build:cjs": "cross-env BABEL_ENV=cjs babel es6 --out-dir lib",
+    "build": "npm run clean && npm run build:ts && npm run build:cjs",
+    "prepublish": "npm run clean && npm run build",
+    "start": "npm link",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "wolf": "bin/wolf-init"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^10.12.12",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "cross-env": "^5.2.0",
+    "typescript": "^3.2.2"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "6.10"
+          }
+        }
+      ]
+    ]
+  },
+  "dependencies": {
+    "co": "^4.6.0",
+    "co-prompt": "^1.0.0",
+    "commander": "^2.19.0",
+    "download-git-repo": "^1.1.0",
+    "ora": "^3.0.0"
+  }
+}

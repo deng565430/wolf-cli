@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "node",
+    "sourceMap": false,
+    "lib": ["es2017"],
+    "jsx": "react",
+    "target": "es2015",
+    "types": ["node"]
+  },
+  "exclude": ["node_modules"]
+}
