@@ -16,6 +16,10 @@
   "bin": {
     "wolf": "bin/wolf-init"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deng565430/wolf-cli.git"
+  },
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^10.12.12",
