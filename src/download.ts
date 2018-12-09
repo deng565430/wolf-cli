@@ -6,7 +6,7 @@ import chalk from 'chalk'
 export default function (target) {
     return new Promise((resolve, reject)=> {
         // 这里可以根据具体的模板地址设置下载的url，注意，如果是git，url后面的branch不能忽略
-        const url = 'https://github.com:deng565430/webpack4-demo#master'
+        const url = 'https://github.com:deng565430/my-react-demo#master'
         const spinner = ora(`创建项目中...`)
         spinner.start()
         download(url,target, {clone: true}, (err) => {
